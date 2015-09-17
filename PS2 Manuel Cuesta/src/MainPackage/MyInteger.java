@@ -97,21 +97,14 @@ public class MyInteger {
 		// must use this.value to compare the integer of 'value' before to another value that MyInteger makes,
 		// through the .getvalue() method
 	}
-	static // static method parseInt(char[])
-	
+	// static method parseInt(char[])
+	// first, make an array of numbers in char[] type
+	public static char[] array = { '1', '2', '3', '4', '5'};
 	public static int parseInt(char[] String) {
-		char [] string_array = { 1, 2, 3, 4, 5};
-		
-		
-		for (int index = 0; index < string_array.length; index++) {
-			
-			String string = string + string_array[index];
-		}
-		int number = String string;
-		
-		
-		System.out.print(string);
+		// Instead of writing out lines of code, use the parseInt() method under the Integer class
+		return parseInt(array);
 	}
+		
 	
 	
 	
