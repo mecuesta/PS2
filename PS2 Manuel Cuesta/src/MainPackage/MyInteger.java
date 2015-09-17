@@ -25,7 +25,7 @@ public class MyInteger {
 	public boolean isEven() {
 		// A way to check to see if an integer is even is to see
 		// if it has a remainder after dividing it by 2 through the % operator
-		return this.value%2==0;
+		return this.getvalue()%2==0;
 		// Double equal sign is needed when dealing with boolean expressions
 		// The above line checks to see if the int value has any remainders
 		// after being divided by two, if it's True, returns True, if False, Returns False
@@ -34,7 +34,7 @@ public class MyInteger {
 	// the isOdd Method for seeing if 'value' is Odd
 	public boolean isOdd() {
 		// Same Idea as isEven, but if the remainder does not equal 0, then it's odd
-		return this.value%2!=0;
+		return this.getvalue()%2!=0;
 	}
 	
 	// the isPrime Method for seeing if value is Prime
@@ -46,7 +46,7 @@ public class MyInteger {
 		// A for loop starting at 2, going to one less than 'value'
 		// and increasing by one every time it runs through the iteration
 		for (int num=2; num<this.value; num++) {
-			if (this.value%num==0) {
+			if (this.getvalue()%num==0) {
 				// if the 'if' parameter is True, then 'value' is not Prime
 				return false;
 			}
@@ -90,27 +90,24 @@ public class MyInteger {
 	// The equals(int) and equals(MyInteger) Methods
 	// use same techniques, respectively, to retrieve the 'value'
 	public boolean equals(int other_value) {
-		return value==other_value;
+		return this.getvalue()==other_value;
 	}
 	public boolean equals(MyInteger other_value) {
-		return this.value==other_value.getvalue();
+		return this.getvalue()==other_value.getvalue();
 		// must use this.value to compare the integer of 'value' before to another value that MyInteger makes,
 		// through the .getvalue() method
 	}
 	// static method parseInt(char[])
-	// first, make an array of numbers in char[] type
-	public static char[] array = { '1', '2', '3', '4', '5'};
 	public static int parseInt(char[] String) {
 		// Instead of writing out lines of code, use the parseInt() method under the Integer class
-		return parseInt(array);
+		return parseInt(String);
 	}
-		
-	
-	
+	public static int parseInt(String string) {
+		return parseInt(string);
+	}
 	
 	public static void main(String[] args) {
-		
+		// Needed for program to run
 	}
-
 
 }
